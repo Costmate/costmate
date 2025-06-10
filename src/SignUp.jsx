@@ -25,7 +25,7 @@ export default function SignUp() {
 
         <form className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1">First Name</label>
+            <label className="block text-sm font-bold mb-1">First Name</label>
             <input
               type="text"
               placeholder="Enter your first name"
@@ -34,7 +34,7 @@ export default function SignUp() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Last Name</label>
+            <label className="block text-sm font-bold mb-1">Last Name</label>
             <input
               type="text"
               placeholder="Enter your last name"
@@ -43,7 +43,7 @@ export default function SignUp() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Email</label>
+            <label className="block text-sm font-bold mb-1">Email</label>
             <input
               type="email"
               placeholder="Enter your email"
@@ -52,7 +52,7 @@ export default function SignUp() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Phone</label>
+            <label className="block text-sm font-bold mb-1">Phone</label>
             <input
               type="tel"
               placeholder="Enter phone number"
@@ -61,7 +61,7 @@ export default function SignUp() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Password</label>
+            <label className="block text-sm font-bold mb-1">Password</label>
             <div className="relative">
               <input
                 type="password"
@@ -76,7 +76,7 @@ export default function SignUp() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Confirm Password</label>
+            <label className="block text-sm font-bold mb-1">Confirm Password</label>
             <div className="relative">
               <input
                 type="password"
