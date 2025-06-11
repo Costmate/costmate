@@ -59,7 +59,7 @@ const Login = () => {
 
           <div className="flex items-center my-4">
             <div className="flex-grow border-t"></div>
-            <span className="mx-2 text-sm text-gray-400">Or</span>
+            <span className="mx-2 text-sm text-gray-400">OR</span>
             <div className="flex-grow border-t"></div>
           </div>
 
