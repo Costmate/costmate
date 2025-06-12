@@ -14,7 +14,10 @@ import {
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import FormInput from "@/src/components/FormInput";
+import FormInput from "@/src/components/forms/FormInput";
+import FormContainer from "./FormContainer";
+import { accentClassNames } from "@/lib/utils";
+import GoogleOption from "./GoogleOption";
 
 // Schema including "remember" field
 const loginSchema = z.object({
@@ -26,6 +29,8 @@ const loginSchema = z.object({
 });
 
 export default function LoginForm() {
+  const { accent, accentHover } = accentClassNames;
+
   const form = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -41,11 +46,12 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto space-y-6 p-6 shadow-md rounded-xl border border-gray-200">
-      <h2 className="text-2xl font-semibold text-center">Log In</h2>
-
+    <FormContainer
+      title={"Welcome Back"}
+      subtitle={"Please enter your details to sign in"}
+    >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormInput
             form={form}
             name="userEmail"
@@ -71,7 +77,7 @@ export default function LoginForm() {
                       checked={field.value}
                       onCheckedChange={field.onChange}
                       id="remember"
-                      className="data-[state=checked]:bg-[#550948] data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-[#550948] data-[state=checked]:border-[#550948]"
+                      className={`data-[state=checked]:${accent} data-[state=checked]:text-primary-foreground dark:data-[state=checked]:${accent} data-[state=checked]:border-white`}
                     />
                   </FormControl>
                   <FormLabel htmlFor="remember" className="mb-0">
@@ -81,14 +87,18 @@ export default function LoginForm() {
               )}
             />
 
-            <small>Forgot Password?</small>
+            <small className="font-medium">Forgot Password?</small>
           </div>
 
-          <Button type="submit" className="w-full bg-[#550948] cursor-pointer">
-            Log In
+          <Button
+            type="submit"
+            className={`w-full ${accent} ${accentHover} cursor-pointer`}
+          >
+            Sign In
           </Button>
         </form>
       </Form>
-    </div>
+      <GoogleOption buttonText={'Sign In With Google'} bottomText={"Don't you have an account?"} ctaText={'Sign Up'} /> 
+    </FormContainer>
   );
 }
