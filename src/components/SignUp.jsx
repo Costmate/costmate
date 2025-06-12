@@ -36,12 +36,13 @@ export default function SignUpForm() {
 
   const onSubmit = (data) => {
     console.log('Form Data:', data)
+    methods.reset()
   }
 
   return (
     <FormProvider {...methods}>
       <Form {...methods}>
-        <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4 max-w-md px-4 mx-auto">
+        <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4 max-w-md p-4 mx-auto">
           <FormInput name="firstName" label="First Name" placeholder={'Enter your first name'} />
           <FormInput name="lastName" label="Last Name" placeholder={'Enter your last name'}/>
           <FormInput name="email" label="Email" placeholder={'Enter your email'} />
