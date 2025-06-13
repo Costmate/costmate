@@ -18,6 +18,8 @@ import FormInput from "@/src/components/forms/FormInput";
 import FormContainer from "./FormContainer";
 import { accentClassNames } from "@/lib/utils";
 import GoogleOption from "./GoogleOption";
+import { sleep } from "@/lib/utils";
+import { NavLink } from "react-router-dom";
 
 // Schema including "remember" field
 const loginSchema = z.object({
@@ -40,7 +42,8 @@ export default function LoginForm() {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    await sleep(2000);
     console.log("Login data:", data); // includes remember
     form.reset();
   };
@@ -87,18 +90,26 @@ export default function LoginForm() {
               )}
             />
 
-            <small className="font-medium">Forgot Password?</small>
+            {/* Forgot password should ideally lead to a page that collects user's email */}
+            <NavLink to={"/forgot-password"}>
+              <small className="font-medium">Forgot Password?</small>
+            </NavLink>
           </div>
 
           <Button
             type="submit"
             className={`w-full ${accent} ${accentHover} cursor-pointer`}
           >
-            Sign In
+            {form.formState.isSubmitting ? "Signing In..." : "Sign In"}
           </Button>
         </form>
       </Form>
-      <GoogleOption buttonText={'Sign In With Google'} bottomText={"Don't you have an account?"} ctaText={'Sign Up'} /> 
+      <GoogleOption
+        buttonText={"Sign In With Google"}
+        bottomText={"Don't you have an account?"}
+        ctaText={"Sign Up"}
+        ctaPath={'/signup'}
+      />
     </FormContainer>
   );
 }
