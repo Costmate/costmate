@@ -7,7 +7,7 @@ export default function MainLayout() {
 
   return (
     <div>
-      <div className="flex w-screen items-center justify-between px-8 h-15 border">
+      <div className="flex w-screen items-center justify-between px-2 md:px-8 h-15 border">
         <NavLink to={"/"}>
           <Logo />
         </NavLink>

@@ -80,7 +80,7 @@ export default function LoginForm() {
                       checked={field.value}
                       onCheckedChange={field.onChange}
                       id="remember"
-                      className={`data-[state=checked]:${accent} data-[state=checked]:text-primary-foreground dark:data-[state=checked]:${accent} data-[state=checked]:border-white`}
+                      className={`data-[state=checked]:bg-[#550948] data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-[#550948] data-[state=checked]:border-white`}
                     />
                   </FormControl>
                   <FormLabel htmlFor="remember" className="mb-0">
