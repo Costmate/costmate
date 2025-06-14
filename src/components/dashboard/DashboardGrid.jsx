@@ -1,14 +1,18 @@
 export default function DashboardGrid() {
   return (
-    <div className="overflow-auto min-h-screen">
+    <div className="overflow-auto min-h-screen max-w-[1200px] mx-auto">
       <div
         className="
           grid
+          justify-center
           gap-4
+
           grid-cols-1
-          md:grid-cols-2
           grid-rows-[repeat(4,100px)_repeat(4,400px)]
+
+          md:grid-cols-2
           md:grid-rows-[repeat(2,100px)_repeat(3,400px)]
+          
           xl:grid-cols-[repeat(4,250px)]
           xl:grid-rows-[repeat(10,100px)]
         "
