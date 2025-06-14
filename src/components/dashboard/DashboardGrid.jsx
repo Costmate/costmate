@@ -1,5 +1,9 @@
 import DashboardCard from "./DashboardCard";
-import { dashboardSummaryData } from "@/src/data/summaryData";
+import InventoryCard from "./InventoryCard";
+import {
+  dashboardSummaryData,
+  dashboardInventoryData,
+} from "@/src/data/summaryData";
 
 export default function DashboardGrid() {
   const totalOrders = dashboardSummaryData[0];
@@ -84,8 +88,24 @@ export default function DashboardGrid() {
         </div>
 
         {/* Item 7 - spans 5 rows */}
-        <div className="bg-white border rounded-lg p-4  xl:row-span-5">
-          Item 7 (5 rows)
+        <div className="bg-white border rounded-lg px-2 py-4  xl:row-span-5">
+          <h2 className="text-gray-500 px-2  font-semibold text-xl">
+            Inventory Alert
+          </h2>
+          <div className="overflow-y-scroll h-11/12 py-2">
+            {dashboardInventoryData.map((item, index) => {
+              return (
+                <InventoryCard
+                  key={index}
+                  material={item.material}
+                  stock={item.stock}
+                  lowMargin={item.lowMargin}
+                  criticalMargin={item.criticalMargin}
+                  uom={item.uom}
+                />
+              );
+            })}
+          </div>
         </div>
 
         {/* Item 8 - spans 5 rows and 3 columns */}

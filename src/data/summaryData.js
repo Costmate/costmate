@@ -34,3 +34,41 @@ export const dashboardSummaryData = [
     description: 'Critical'
   },
 ]
+
+export const dashboardInventoryData = [
+  {
+    material: 'Almond Flour',
+    stock: 2,
+    lowMargin: 5,
+    criticalMargin: 3,
+    uom: 'bottles'
+  },
+  {
+    material: 'Unsalted Butter',
+    stock: 8,
+    lowMargin: 10,
+    criticalMargin: 5,
+    uom: 'kg'
+  },
+  {
+    material: 'Granulated Sugar',
+    stock: 50,
+    lowMargin: 15,
+    criticalMargin: 5,
+    uom: 'kg'
+  },
+  {
+    material: 'All-Purpose Flour',
+    stock: 25,
+    lowMargin: 30,
+    criticalMargin: 15,
+    uom: 'kg'
+  },
+  {
+    material: 'Raw Eggs',
+    stock: 2,
+    lowMargin: 5,
+    criticalMargin: 3,
+    uom: 'crates'
+  },
+]
