@@ -1,7 +1,7 @@
-import React from 'react'
+import DashboardGrid from "../components/dashboard/DashboardGrid"
 
 export default function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <DashboardGrid />
   )
 }
