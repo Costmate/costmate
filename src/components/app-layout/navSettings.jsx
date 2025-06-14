@@ -7,6 +7,7 @@ import { TfiBarChart } from "react-icons/tfi";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { LuGraduationCap } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
+import { BsGraphUpArrow } from "react-icons/bs";
 
 export const navSetting = [
   {
@@ -50,3 +51,7 @@ export const navSetting = [
     icon: <GoGear />
   },
 ]
+
+export function getIcon(searchText){
+  return navSetting.find((item) => item.text.toLowerCase() == searchText.toLowerCase())?.icon || <BsGraphUpArrow />
+}

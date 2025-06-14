@@ -1,4 +1,12 @@
+import DashboardCard from "./DashboardCard";
+import { dashboardSummaryData } from "@/src/data/summaryData";
+
 export default function DashboardGrid() {
+  const totalOrders = dashboardSummaryData[0];
+  const profitMargin = dashboardSummaryData[1];
+  const activeOrders = dashboardSummaryData[2];
+  const lowStock = dashboardSummaryData[3];
+
   return (
     <div className="overflow-auto min-h-screen max-w-[1200px] mx-auto">
       <div
@@ -12,22 +20,58 @@ export default function DashboardGrid() {
 
           md:grid-cols-2
           md:grid-rows-[repeat(2,100px)_repeat(3,400px)]
-          
+
           xl:grid-cols-[repeat(4,250px)]
           xl:grid-rows-[repeat(10,100px)]
         "
       >
         {/* Item 1 */}
-        <div className="bg-white border rounded-lg p-4">Item 1</div>
+        <div className="bg-white border rounded-lg p-3">
+          <DashboardCard
+            title={totalOrders.title}
+            measure={totalOrders.measure}
+            value={totalOrders.value}
+            uom={totalOrders.uom}
+            isTrackingChange={true}
+            change={totalOrders.change}
+            icon={totalOrders.icon}
+          />
+        </div>
 
         {/* Item 2 */}
-        <div className="bg-white border rounded-lg p-4">Item 2</div>
+        <div className="bg-white border rounded-lg p-4">
+          <DashboardCard
+            title={profitMargin.title}
+            measure={profitMargin.measure}
+            icon={profitMargin.icon}
+            isTrackingChange={profitMargin.isTrackingChange}
+            change={profitMargin.change}
+            value={profitMargin.value}
+            uom={profitMargin.uom}
+          />
+        </div>
 
         {/* Item 3 */}
-        <div className="bg-white border rounded-lg p-4">Item 3</div>
+        <div className="bg-white border rounded-lg p-4">
+          <DashboardCard
+            title={activeOrders.title}
+            measure={activeOrders.measure}
+            icon={activeOrders.icon}
+            isTrackingChange={activeOrders.isTrackingChange}
+          />
+        </div>
 
         {/* Item 4 */}
-        <div className="bg-white border rounded-lg p-4">Item 4</div>
+        <div className="bg-white border rounded-lg p-4">
+          <DashboardCard
+            title={lowStock.title}
+            measure={lowStock.measure}
+            icon={lowStock.icon}
+            isTrackingChange={lowStock.isTrackingChange}
+            count={lowStock.count}
+            description={lowStock.description}
+          />
+        </div>
 
         {/* Item 5 - spans 4 rows and 3 columns */}
         <div className="bg-white border rounded-lg p-4 md:col-span-2 xl:col-span-3 xl:row-span-4">
