@@ -1,4 +1,4 @@
-import Logo from "../Logo";
+import Logo from "../general/Logo";
 
 export default function FormContainer({ title, subtitle, children}) {
   return (

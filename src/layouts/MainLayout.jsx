@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-import Logo from "../components/Logo";
+import Logo from "../components/general/Logo";
 import { accentClassNames, cn } from "@/lib/utils";
 
 export default function MainLayout() {

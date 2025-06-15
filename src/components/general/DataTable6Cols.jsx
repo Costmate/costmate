@@ -41,18 +41,18 @@ export function DataRow({
   return (
     <div
       className={`w-full px-4 py-3 border-b border-gray-200 text-sm ${
-        isHeader ? "hidden xl:flex font-semibold text-gray-600 uppercase bg-gray-50" : "flex"
-      } flex-col xl:flex-row items-start xl:items-center justify-between`}
+        isHeader ? "hidden lg:flex font-semibold text-gray-600 uppercase bg-gray-50" : "flex"
+      } flex-col lg:flex-row items-start lg:items-center justify-between`}
     >
-      {/* Left group for mobile, all inline on xl */}
-      <div className="flex flex-col xl:flex-1 gap-1 xl:flex-row xl:gap-4">
+      {/* Left group for mobile, all inline on lg */}
+      <div className="flex flex-col lg:flex-1 gap-1 lg:flex-row lg:gap-4">
         <span>{cell1}</span>
         <span>{cell2}</span>
         <span>{cell3}</span>
       </div>
 
-      {/* Right group for mobile, all inline on xl */}
-      <div className="flex flex-col xl:flex-1 gap-1 xl:flex-row xl:gap-4 xl:justify-end">
+      {/* Right group for mobile, all inline on lg */}
+      <div className="flex flex-col lg:flex-1 gap-1 lg:flex-row lg:gap-4 lg:justify-end">
         <span>{cell4}</span>
         <span>{cell5}</span>
         <span>{cell6}</span>
@@ -62,8 +62,35 @@ export function DataRow({
 }
 
 
-export default function RecentOrders() {
+export default function DataTable6Cols({ tableData }) {
+  const { headers, data } = tableData;
+
   return (
-    <div>RecentOrders</div>
-  )
+    <div className="w-full">
+      {/* Header row */}
+      <DataRow
+        isHeader={true}
+        cell1={headers.cell1}
+        cell2={headers.cell2}
+        cell3={headers.cell3}
+        cell4={headers.cell4}
+        cell5={headers.cell5}
+        cell6={headers.cell6}
+      />
+
+      {/* Data rows */}
+      {data.map((row, index) => (
+        <DataRow
+          key={index}
+          isHeader={false}
+          cell1={row.cell1}
+          cell2={row.cell2}
+          cell3={row.cell3}
+          cell4={row.cell4}
+          cell5={row.cell5}
+          cell6={row.cell6}
+        />
+      ))}
+    </div>
+  );
 }

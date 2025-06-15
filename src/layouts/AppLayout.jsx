@@ -4,7 +4,7 @@ import { User, Menu, X } from "lucide-react";
 import { accentClassNames, cn, getPageTitle } from "@/lib/utils";
 import { navSetting } from "../components/app-layout/navSettings";
 import NavButton from "../components/app-layout/NavButton";
-import Logo from "../components/Logo";
+import Logo from "../components/general/Logo";
 import NotificationBell from "../components/app-layout/NotificationBell";
 
 export default function AppLayout() {
