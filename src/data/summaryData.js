@@ -72,3 +72,96 @@ export const dashboardInventoryData = [
     uom: 'crates'
   },
 ]
+
+export const recentOrders = {
+  headers: {
+    cell1: "ID",
+    cell2: "Date",
+    cell3: "Customer Name",
+    cell4: "Items",
+    cell5: "Amount",
+    cell6: "Status"
+  },
+  data: [
+    {
+      cell1: "#001",
+      cell2: "2025-06-01",
+      cell3: "Alice Johnson",
+      cell4: { description: "Chocolate", quantity: 2 },
+      cell5: 15.0,
+      cell6: "Delivered"
+    },
+    {
+      cell1: "#002",
+      cell2: "2025-06-02",
+      cell3: "Bob Smith",
+      cell4: { description: "Milk", quantity: 4 },
+      cell5: 12.5,
+      cell6: "In Progress"
+    },
+    {
+      cell1: "#003",
+      cell2: "2025-06-03",
+      cell3: "Charlie Lee",
+      cell4: { description: "Cookies", quantity: 3 },
+      cell5: 9.75,
+      cell6: "New Order"
+    },
+    {
+      cell1: "#004",
+      cell2: "2025-06-04",
+      cell3: "Diana Prince",
+      cell4: { description: "Bread", quantity: 1 },
+      cell5: 3.2,
+      cell6: "Delivered"
+    },
+    {
+      cell1: "#005",
+      cell2: "2025-06-05",
+      cell3: "Ethan Hunt",
+      cell4: { description: "Juice", quantity: 6 },
+      cell5: 18.0,
+      cell6: "In Progress"
+    },
+    {
+      cell1: "#006",
+      cell2: "2025-06-06",
+      cell3: "Fiona Gallagher",
+      cell4: { description: "Butter", quantity: 2 },
+      cell5: 7.3,
+      cell6: "Delivered"
+    },
+    {
+      cell1: "#007",
+      cell2: "2025-06-07",
+      cell3: "George Mason",
+      cell4: { description: "Cheese", quantity: 5 },
+      cell5: 22.0,
+      cell6: "New Order"
+    },
+    {
+      cell1: "#008",
+      cell2: "2025-06-08",
+      cell3: "Hannah Wells",
+      cell4: { description: "Eggs", quantity: 12 },
+      cell5: 10.0,
+      cell6: "Delivered"
+    },
+    {
+      cell1: "#009",
+      cell2: "2025-06-09",
+      cell3: "Ian Fleming",
+      cell4: { description: "Cereal", quantity: 2 },
+      cell5: 6.5,
+      cell6: "In Progress"
+    },
+    {
+      cell1: "#010",
+      cell2: "2025-06-10",
+      cell3: "Jane Doe",
+      cell4: { description: "Yogurt", quantity: 4 },
+      cell5: 8.8,
+      cell6: "New Order"
+    }
+  ]
+};

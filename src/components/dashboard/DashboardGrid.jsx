@@ -4,6 +4,7 @@ import {
   dashboardSummaryData,
   dashboardInventoryData,
 } from "@/src/data/summaryData";
+import RecentOrders from "./RecentOrders";
 
 export default function DashboardGrid() {
   const totalOrders = dashboardSummaryData[0];
@@ -110,7 +111,10 @@ export default function DashboardGrid() {
 
         {/* Item 8 - spans 5 rows and 3 columns */}
         <div className="bg-white border rounded-lg p-4 md:col-span-2 xl:col-span-3 xl:row-span-5">
-          Item 8 (5 rows, 3 cols)
+          <h2 className="text-gray-500 px-2 mb-4 font-semibold text-xl">
+            Recent Orders
+          </h2>
+          <RecentOrders />
         </div>
       </div>
     </div>
