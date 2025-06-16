@@ -5,7 +5,8 @@ import {
   dashboardInventoryData,
 } from "@/src/data/summaryData";
 import RecentOrders from "./RecentOrders";
-import { ChartPieDonut } from "../general/PieChart";
+import { ChartPieDonut } from "./PieChart";
+import { ChartLineMultiple } from "./LineChart";
 
 export default function DashboardGrid() {
   const totalOrders = dashboardSummaryData[0];
@@ -80,8 +81,8 @@ export default function DashboardGrid() {
         </div>
 
         {/* Item 5 - spans 4 rows and 3 columns */}
-        <div className="bg-white border rounded-lg p-4 md:col-span-2 xl:col-span-3 xl:row-span-4">
-          Item 5 (4 rows, 3 cols)
+        <div className="bg-white border rounded-lg md:col-span-2 xl:col-span-3 xl:row-span-4">
+          <ChartLineMultiple />
         </div>
 
         {/* Item 6 - spans 4 rows */}
