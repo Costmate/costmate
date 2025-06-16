@@ -42,7 +42,7 @@ export function DataRow({
     <div
       className={`w-full px-4 py-3 border-b border-gray-200 text-sm ${
         isHeader
-          ? "hidden lg:flex font-semibold text-gray-600 bg-gray-50"
+          ? "hidden lg:flex font-semibold text-gray-600 bg-gray-200 rounded-tl-md rounded-tr-md"
           : "flex"
       } flex items-start lg:items-center justify-between`}
     >
