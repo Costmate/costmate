@@ -44,13 +44,13 @@ export function ChartLineMultiple() {
     <Card className={"max-h-full shadow-none border-none"}>
       <CardHeader>
         <CardTitle>
-          <h2 className="text-gray-500 mb-4 font-semibold text-xl">
+          <h2 className="text-gray-500 font-semibold text-xl">
             Orders Analytics
           </h2>
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={chartConfig} className={'max-h-[350px] mx-auto w-full'}>
           <LineChart
             accessibilityLayer
             data={chartData}
@@ -86,7 +86,7 @@ export function ChartLineMultiple() {
         </ChartContainer>
       </CardContent>
       <CardFooter>
-        <div className="flex w-full items-start gap-2 text-sm">
+        {/* <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
             <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
@@ -95,7 +95,7 @@ export function ChartLineMultiple() {
               Showing total visitors for the last 6 months
             </div>
           </div>
-        </div>
+        </div> */}
       </CardFooter>
     </Card>
   );
