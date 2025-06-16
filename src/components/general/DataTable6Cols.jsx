@@ -57,7 +57,7 @@ export function DataRow({
       <div className="flex flex-col lg:flex-1 gap-1 lg:flex-row lg:gap-4 ">
         {cell4 && <span className={`w-[120px] ${isHeader ? 'text-sm' : 'text-xs'}`}>{cell4}</span>}
         {cell5 && <span className={`w-[90px] flex items-center ${isHeader ? 'text-sm' : 'text-xs'}`}>{isHeader ? '' : '$'} {cell5}</span>}
-        {cell6 && <span className={`w-[150px] flex items-center ${isHeader ? 'text-sm' : 'text-xs'}`}>{cell6}</span>}
+        {cell6 && <span className={`w-[140px] flex items-center ${isHeader ? 'text-sm' : 'text-xs'}`}>{cell6}</span>}
       </div>
     </div>
   );
