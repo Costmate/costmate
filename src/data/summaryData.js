@@ -165,3 +165,16 @@ export const recentOrders = {
     }
   ]
 };
+
+export const costComponents = [
+  { component: 'Ingredients', cost: 800 },
+  { component: 'Personnel', cost: 1200 },
+  { component: 'Packaging', cost: 450 },
+  { component: 'Utilities', cost: 300 },
+  { component: 'Transportation', cost: 600 },
+  { component: 'Marketing', cost: 700 },
+  { component: 'Equipment Maintenance', cost: 350 },
+  { component: 'Rent', cost: 300 },
+  { component: 'Administrative', cost: 400 },
+  { component: 'Waste Management', cost: 250 }
+];
