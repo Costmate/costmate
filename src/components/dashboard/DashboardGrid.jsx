@@ -15,7 +15,7 @@ export default function DashboardGrid() {
   const lowStock = dashboardSummaryData[3];
 
   return (
-    <div className="overflow-auto min-h-screen max-w-[1200px] mx-auto">
+    <div className=" min-h-screen  max-w-[1200px] mx-auto">
       <div
         className="
           grid
@@ -26,7 +26,8 @@ export default function DashboardGrid() {
           grid-rows-[repeat(4,100px)_repeat(1,300px)_repeat(1,500px)_repeat(2,450px)]
 
           md:grid-cols-2
-          md:grid-rows-[repeat(2,100px)_repeat(1,400px)_repeat(1,)]
+          md:grid-rows-[repeat(2,100px)_repeat(1,400px)_repeat(1,550px)_repeat(1,400px)]
+          lg:grid-rows-[repeat(2,100px)_repeat(1,500px)_repeat(1,550px)_repeat(1,500px)]
 
           xl:grid-cols-[repeat(4,250px)]
           xl:grid-rows-[repeat(10,100px)]
