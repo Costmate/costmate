@@ -23,7 +23,7 @@ export default function DashboardGrid() {
         <p className="text-gray-500">Welcome back!</p>
         <div className="flex flex-col md:flex-row gap-4">
           <button className={cn('cursor-pointer p-2 rounded-md border text-white text-sm flex gap-2 items-center justify-center', accentClassNames.accent)}> <FaPlus /> Quick Recipe</button>
-          <button className={cn('cursor-pointer p-2 rounded-md border text-sm flex gap-2 items-center justify-center', accentClassNames.accentText, accentClassNames.accentBorder)}> <FaRegEye /> View Reports</button>
+          <button className={cn('cursor-pointer p-2 rounded-md border-2 text-sm font-medium flex gap-2 items-center justify-center', accentClassNames.accentText, accentClassNames.accentBorder)}> <FaRegEye /> View Reports</button>
         </div>
       </div>
       <div
