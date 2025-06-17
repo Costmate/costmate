@@ -7,6 +7,9 @@ import {
 import RecentOrders from "./RecentOrders";
 import { ChartPieDonut } from "./PieChart";
 import { ChartLineMultiple } from "./LineChart";
+import { cn, accentClassNames } from "@/lib/utils";
+import { FaPlus } from "react-icons/fa6";
+import { FaRegEye } from "react-icons/fa";
 
 export default function DashboardGrid() {
   const totalOrders = dashboardSummaryData[0];
@@ -16,6 +19,13 @@ export default function DashboardGrid() {
 
   return (
     <div className=" min-h-screen  max-w-[1200px] mx-auto">
+      <div className="flex flex-col md:flex-row gap-4 px-4 justify-between md:items-center mb-4 max-w-[1080px] mx-auto">
+        <p className="text-gray-500">Welcome back!</p>
+        <div className="flex flex-col md:flex-row gap-4">
+          <button className={cn('cursor-pointer p-2 rounded-md border text-white text-sm flex gap-2 items-center justify-center', accentClassNames.accent)}> <FaPlus /> Quick Recipe</button>
+          <button className={cn('cursor-pointer p-2 rounded-md border text-sm flex gap-2 items-center justify-center', accentClassNames.accentText, accentClassNames.accentBorder)}> <FaRegEye /> View Reports</button>
+        </div>
+      </div>
       <div
         className="
           grid
