@@ -23,10 +23,10 @@ export default function DashboardGrid() {
           gap-4
 
           grid-cols-1
-          grid-rows-[repeat(4,100px)_repeat(4,400px)]
+          grid-rows-[repeat(4,100px)_repeat(1,300px)_repeat(1,500px)_repeat(2,450px)]
 
           md:grid-cols-2
-          md:grid-rows-[repeat(2,100px)_repeat(3,400px)]
+          md:grid-rows-[repeat(2,100px)_repeat(1,400px)_repeat(1,)]
 
           xl:grid-cols-[repeat(4,250px)]
           xl:grid-rows-[repeat(10,100px)]
