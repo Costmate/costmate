@@ -1,6 +1,6 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
+import { profitTrend } from "@/src/data/summaryData";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
 import {
@@ -15,26 +15,21 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent
 } from "@/components/ui/chart";
 
 export const description = "A multiple line chart";
 
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
+const chartData = profitTrend;
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  sales: {
+    label: "Sales (GBP)",
     color: "var(--chart-1)",
   },
-  mobile: {
-    label: "Mobile",
+  profit: {
+    label: "Profit (GBP)",
     color: "var(--chart-2)",
   },
 };
@@ -61,7 +56,7 @@ export function ChartLineMultiple() {
           >
             <CartesianGrid vertical={false} />
             <XAxis
-              dataKey="month"
+              dataKey="period"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
@@ -69,19 +64,20 @@ export function ChartLineMultiple() {
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Line
-              dataKey="desktop"
+              dataKey="sales"
               type="monotone"
-              stroke="var(--color-desktop)"
+              stroke="var(--color-sales)"
               strokeWidth={2}
               dot={false}
             />
             <Line
-              dataKey="mobile"
+              dataKey="profit"
               type="monotone"
-              stroke="var(--color-mobile)"
+              stroke="var(--color-profit)"
               strokeWidth={2}
               dot={false}
             />
+            <ChartLegend content={<ChartLegendContent />} />
           </LineChart>
         </ChartContainer>
       </CardContent>

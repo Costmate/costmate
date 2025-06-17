@@ -178,3 +178,18 @@ export const costComponents = [
   { component: 'Administrative', cost: 400 },
   { component: 'Waste Management', cost: 250 }
 ];
+
+export const profitTrend = [
+  { period: "January", sales: 186, profit: 80 },
+  { period: "February", sales: 305, profit: 200 },
+  { period: "March", sales: 237, profit: 120 },
+  { period: "April", sales: 73, profit: 190 },
+  { period: "May", sales: 209, profit: 130 },
+  { period: "June", sales: 214, profit: 140 },
+  { period: "July", sales: 186, profit: 80 },
+  { period: "August", sales: 305, profit: 200 },
+  { period: "September", sales: 237, profit: 120 },
+  { period: "October", sales: 73, profit: 190 },
+  { period: "November", sales: 209, profit: 130 },
+  { period: "December", sales: 214, profit: 140 },
+];
